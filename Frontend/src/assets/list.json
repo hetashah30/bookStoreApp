@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Story Book",
+    "title": "A collection of beautiful stories and adventures.",
+    "price": 150,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/flat-little-red-riding-hood-birthday-invitation_23-2148985038.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 2,
+    "name": "Trek Book",
+    "title": "Explore the world of exciting adventures.",
+    "price": 100,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-psd/flat-design-leisure-wildlife-template-design_23-2150398958.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 3,
+    "name": "Mystery Book",
+    "title": "Unravel the mind-blowing mysteries of the universe.",
+    "price": 150,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/into-unknown-wattpad-book-cover_23-2149452348.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 4,
+    "name": "Science Book",
+    "title": "Journey through space and time.",
+    "price": 200,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/hand-drawn-retro-space-poster-template_23-2150899555.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 5,
+    "name": "Fantasy Book",
+    "title": "Enter a world of magic and fantasy.",
+    "price": 250,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-photo/international-day-education-cartoon-style_23-2151007399.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 6,
+    "name": "Historical Book",
+    "title": "Discover the past through historical narratives.",
+    "price": 300,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/golden-floral-cards_23-2148008900.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 7,
+    "name": "Life Book",
+    "title": "Learn about the lives of great individuals.",
+    "price": 350,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-psd/flat-design-music-template-design_23-2150399076.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 8,
+    "name": "Cookbook",
+    "title": "Explore culinary delights with our cookbook.",
+    "price": 200,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-psd/cook-home-flyer-template_23-2148567729.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 9,
+    "name": "Travel Guide",
+    "title": "Your companion for exploring new destinations.",
+    "price": 300,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/flat-annual-report-template-travel-agency_23-2149588874.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 10,
+    "name": "Self-Help Book",
+    "title": "Empower yourself with our self-help book.",
+    "price": 250,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-psd/less-stress-poster-design-template_23-2149189057.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 11,
+    "name": "Music Book",
+    "title": "Discover the world of music with our book.",
+    "price": 300,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-psd/acoustic-guitar-lessons-flyer-design_23-2148615704.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 12,
+    "name": "Art Book",
+    "title": "Explore the beauty of art through our book.",
+    "price": 400,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-psd/creativity-poster-template-with-photo_23-2148979396.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 13,
+    "name": "Poetry Book",
+    "title": "Immerse yourself in the world of poetry.",
+    "price": 150,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-psd/modern-elegant-template_23-2151878776.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 14,
+    "name": "Giggle Book",
+    "title": "Delightful stories for children of all ages.",
+    "price": 100,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-vector/vertical-poster-template-back-school-season_52683-125138.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 15,
+    "name": "Graphic Novel",
+    "title": "A visual storytelling experience.",
+    "price": 200,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-vector/vertical-comic-cover-template-with-man-photograph_52683-107362.jpg?ga=GA1.1.1158799287.1726775642&semt=ais_hybrid&w=740"
+  }
+]
