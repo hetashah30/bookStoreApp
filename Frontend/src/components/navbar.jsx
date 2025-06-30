@@ -184,7 +184,7 @@ function Navbar() {
                 onClick={() =>
                   document.getElementById("my_modal_3").showModal()
                 }
-                className="cursor-pointer bg-white text-black dark:bg-slate-900 dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors px-3 py-2 rounded-md hover:bg-slate-800 duration-300 hover:text-white"
+                className="cursor-pointer bg-white text-black dark:bg-slate-900 dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors px-4 py-3 rounded-md hover:bg-slate-800 duration-300 hover:text-white"
               >
                 Login
               </a>
