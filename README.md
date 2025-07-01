@@ -52,11 +52,14 @@ Built with the MERN stack, it offers both aesthetic appeal and performance.
 ### 📖 Free Books Section
 ![Free Books Section](./Frontend/public/freeBooks.png)
 
-### 📖 Testimonials Section
-![Testimonials Section](./Frontend/public/reviews.png)
-
 ### 📚 Courses Page
 ![Courses](./Frontend/public/books.png)
+
+### 📚 Contact Us Form
+![Contact Us](./Frontend/public/contactForm.png)
+
+### 📖 Testimonials Section
+![Testimonials Section](./Frontend/public/reviews.png)
 
 ---
 
