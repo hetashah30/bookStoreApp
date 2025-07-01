@@ -29,12 +29,15 @@ function Course() {
             <span className="text-pink-500">here :)</span>
           </h1>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-            ratione eum error! Maxime quas blanditiis, esse, iste odit saepe
-            fugiat natus, nemo voluptatem adipisci modi aliquam laboriosam optio
-            ratione ipsa repudiandae? Debitis aliquid doloribus perferendis
-            omnis culpa mollitia neque quo aspernatur nulla ad nesciunt soluta
-            distinctio, numquam repudiandae quidem minima?
+            Welcome to Your Book Library! Explore, Read, Learn, and Grow with
+            our curated books. Explore, Read, Learn, and Grow with our curated
+            collection of books.
+            <br />
+            Whether you're here for adventure, knowledge, or inspiration – we've
+            got the perfect book for you!
+            <br />
+            🚀 Ready to get started? Browse our books below and begin your
+            reading adventure!
           </p>
           <Link to="/">
             <button className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition-colors duration-300">
