@@ -1,6 +1,7 @@
 # 📚 BookStore
 
-BookStore is a modern, responsive web application for exploring, searching, and discovering a variety of books. Users can browse courses, contact the team, and enjoy a user-friendly experience with authentication support and a light/dark theme toggle.
+BookStore is a modern, responsive web application for exploring, searching, and discovering a variety of books. Users can browse courses, contact the team, and enjoy a user-friendly experience with authentication support and a light/dark theme toggle. 
+Built with the MERN stack, it offers both aesthetic appeal and performance.
 
 ---
 
@@ -10,7 +11,7 @@ BookStore is a modern, responsive web application for exploring, searching, and 
 
 ---
 
-## ⚙️ Tech Stack
+## ⚙️ Tech Stack (MERN Stack)
 
 ### Frontend:
 - ⚛️ React.js (with Vite)
