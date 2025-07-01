@@ -13,13 +13,16 @@ function banner() {
               <span className="text-pink-400">new everyday!!!</span>
             </h1>
             <p className="text-xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
-              rerum ut sit recusandae consectetur molestiae fugit culpa qui rem
-              vel? repudiandae sit earum pariatur? Nihil, eum. Quisquam, ea
-              doloremque dolores.
+              We believe that books are more than just paper – they are gateways
+              to new worlds, ideas, and inspiration. Explore our diverse
+              collection featuring bestsellers, timeless classics, academic
+              essentials, and hidden literary treasures. Whether you're a
+              student, a casual reader, or a passionate bibliophile, BookStore
+              offers a seamless and immersive experience to discover, learn, and
+              grow.
             </p>
 
-            <label className="input validator w-full ">
+            {/* <label className="input validator w-full ">
               <svg
                 className="h-[1em] opacity-50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,10 +44,17 @@ function banner() {
                 type="email"
                 placeholder="mail@site.com"
               />
-            </label>
+            </label> */}
           </div>
 
-          <button className="btn mt-6 btn-secondary">Secondary</button>
+          <button href="/course" className="btn mt-6 btn-secondary">
+            <a
+              href="/course"
+              className="hover:text-yellow-100 transition-colors duration-300"
+            >
+              Browse books
+            </a>
+          </button>
 
           <div className="validator-hint hidden">Enter valid email address</div>
         </div>

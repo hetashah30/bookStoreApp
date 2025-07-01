@@ -4,14 +4,22 @@ function footer() {
   return (
     <>
       <div>
-        <hr className="border-gray-600 mt-20" />
+        <hr className="border-gray-600" />
 
         <footer className="footer footer-horizontal footer-center dark:text-gray-400 rounded p-10">
           <nav className="grid grid-flow-col gap-4">
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <a href="/" className="link link-hover">
+              Home
+            </a>
+            <a href="/#about" className="link link-hover">
+              About us
+            </a>
+            <a href="/contact" className="link link-hover">
+              Contact us
+            </a>
+            <a href="/#free" className="link link-hover">
+              Free Offered Books
+            </a>
           </nav>
           <nav>
             <div className="grid grid-flow-col gap-4">
@@ -53,7 +61,7 @@ function footer() {
           <aside>
             <p>
               Copyright © {new Date().getFullYear()} - All right reserved by
-              ACME Industries Ltd
+              bookStore
             </p>
           </aside>
         </footer>

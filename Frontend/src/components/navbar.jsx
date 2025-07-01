@@ -1,44 +1,23 @@
 import React from "react";
 // import React, { useState, useEffect } from "react";
 import Login from "./login";
+import { useAuth } from "../context/AuthProvider"; // Importing useAuth to access authUser and setAuthUser
+import Logout from "./logout"; // Importing the Logout component
+import { useTheme } from "../context/ThemeProvider"; // import this
+import Signup from "./signup";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [theme, setTheme] = React.useState("dark");
+  const [authUser] = useAuth(); // Using useAuth to get authUser and setAuthUser for login/logout functionality
 
-  // Sync with localStorage on first load
-  React.useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    setTheme(savedTheme);
-    const element = document.documentElement;
-    if (savedTheme === "dark") {
-      element.classList.add("dark");
-      document.body.classList.add("dark");
-    } else {
-      element.classList.remove("dark");
-      document.body.classList.remove("dark");
-    }
-  }, []);
-
-  // Update DOM and localStorage when theme changes
-  React.useEffect(() => {
-    const element = document.documentElement;
-    if (theme === "dark") {
-      element.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      document.body.classList.add("dark");
-    } else {
-      element.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      document.body.classList.remove("dark");
-    }
-  }, [theme]);
+  const { theme, setTheme } = useTheme(); // ✅ Use global theme state
 
   const navItems = (
     <>
       <li>
         <a
           href="/"
-          className="hover:text-yellow-300 transition-colors duration-300"
+          className="hover:text-yellow-100 transition-colors duration-300"
         >
           Home
         </a>
@@ -46,7 +25,7 @@ function Navbar() {
       <li>
         <a
           href="/course"
-          className="hover:text-yellow-300 transition-colors duration-300"
+          className="hover:text-yellow-100 transition-colors duration-300"
         >
           Course
         </a>
@@ -54,25 +33,45 @@ function Navbar() {
       <li>
         <a
           href="/contact"
-          className="hover:text-yellow-300 transition-colors duration-300"
+          className="hover:text-yellow-100 transition-colors duration-300"
         >
-          Contact
+          Contact Us
         </a>
       </li>
       <li>
-        <a
-          href="#"
-          className="hover:text-yellow-300 transition-colors duration-300"
+        {/* <a
+          href="#about"
+          className="scroll-smooth hover:text-yellow-100 transition-colors duration-300"
         >
           About
-        </a>
+        </a> */}
+        <Link
+          to="/#about"
+          className="scroll-smooth hover:text-yellow-100 transition-colors duration-300"
+        >
+          About
+        </Link>
+      </li>
+      <li>
+        {/* <a
+          href="#testimonials"
+          className="scroll-smooth hover:text-yellow-100 transition-colors duration-300"
+        >
+          Reviews
+        </a> */}
+        <Link
+          to="/#testimonials"
+          className="scroll-smooth hover:text-yellow-100 transition-colors duration-300"
+        >
+          Reviews
+        </Link>
       </li>
     </>
   );
   return (
     <>
       <div
-        className="dark:bg-slate-900 dark:text-white sticky top-0 left-0 right-0 z-50 shadow transition-all duration-300 bg-gradient-to-r from-purple-600 to-blue-600 p-6 flex justify-between items-center shadow-lg"
+        className="dark:bg-slate-900 dark:text-white sticky top-0 left-0 right-0 z-50 shadow transition-all duration-300 bg-gradient-to-r from-purple-600 to-blue-600 md:p-6 sm:p-4 flex justify-between items-center shadow-lg"
         // className={`w-full transition-all duration-300 ease-in-out ${
         //   sticky ? "bg-white shadow-md" : "bg-transparent"
         // } fixed top-0 left-0 z-50`}
@@ -109,7 +108,7 @@ function Navbar() {
               </ul>
             </div>
             {/* <a className="text-2xl font-bold cursor-pointer md:px-20 px-4">  */}
-            <a className="text-white text-3xl font-bold tracking-wider cursor-pointer">
+            <a className="text-white md:text-3xl sm:text-md text-xl font-bold tracking-wider cursor-pointer">
               bookStore
             </a>
           </div>
@@ -119,8 +118,7 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
-
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <label className="input px-3 py-2 border rounded-md">
                 <svg
                   className="h-[1em] opacity-50"
@@ -144,7 +142,7 @@ function Navbar() {
                   placeholder="Search"
                 />
               </label>
-            </div>
+            </div> */}
 
             <label className="swap swap-rotate">
               {/* this hidden checkbox controls the state */}
@@ -156,7 +154,7 @@ function Navbar() {
 
               {/* sun icon */}
               <svg
-                className={`h-7 w-7 fill-current ${
+                className={`h-8 w-8 fill-current ${
                   theme === "light" ? "hidden" : "block"
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +166,7 @@ function Navbar() {
 
               {/* moon icon */}
               <svg
-                className={`h-7 w-7 fill-current ${
+                className={`h-8 w-8 fill-current ${
                   theme === "dark" ? "hidden" : "block"
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -179,17 +177,22 @@ function Navbar() {
               </svg>
             </label>
 
-            <div className="">
-              <a
-                onClick={() =>
-                  document.getElementById("my_modal_3").showModal()
-                }
-                className="cursor-pointer bg-white text-black dark:bg-slate-900 dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors px-4 py-3 rounded-md hover:bg-slate-800 duration-300 hover:text-white"
-              >
-                Login
-              </a>
-              <Login />
-            </div>
+            {authUser ? (
+              <Logout />
+            ) : (
+              <div>
+                <a
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
+                  className="cursor-pointer bg-white text-black dark:bg-slate-900 dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors md:px-4 md:py-3 px-3 py-2 rounded-md hover:bg-slate-800 duration-300 hover:text-white"
+                >
+                  Login
+                </a>
+                <Login />
+                <Signup />
+              </div>
+            )}
           </div>
         </div>
       </div>

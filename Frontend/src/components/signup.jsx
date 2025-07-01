@@ -1,5 +1,8 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"; // Importing useForm from react-hook-form for form handling
+import axios from "axios"; // Importing axios for making HTTP requests
+import toast from "react-hot-toast"; // Importing react-hot-toast for notifications
+import { useAuth } from "../context/AuthProvider"; // Importing useAuth from AuthProvider for authentication context
 
 function Signup() {
   const {
@@ -8,8 +11,44 @@ function Signup() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Submitted:", data);
+  const [authUser, setAuthUser] = useAuth();
+
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+    // Sending and Storing userInfo to the backend API for signup
+    await axios
+      .post("http://localhost:4001/user/signup", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        // Handle successful signup response
+
+        if (res.data) {
+          // alert("Signup Successful");
+          toast.success("Signup Successful!");
+          document.getElementById("signup_modal").close();
+          setAuthUser(res.data.user);
+        }
+        // Store user data in localStorage
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+        // const redirectPath = localStorage.getItem("redirectAfterLogin");
+        // if (redirectPath) {
+        //   localStorage.removeItem("redirectAfterLogin");
+        //   window.location.href = redirectPath;
+        // }
+      })
+      .catch((error) => {
+        if (error.response) {
+          // Handle signup failure
+          console.log(error);
+          // Display error message to the user
+          // alert("Error: " + error.response.data.message);
+          toast.error("Signup Failed: " + error.response.data.message);
+        }
+      });
   };
 
   return (
@@ -45,9 +84,9 @@ function Signup() {
                 type="text"
                 placeholder="Your full name"
                 className="input input-bordered w-full dark:bg-gray-800 text-black dark:text-white"
-                {...register("name", { required: true })}
+                {...register("fullname", { required: true })}
               />
-              {errors.name && (
+              {errors.fullname && (
                 <span className="text-red-500 text-sm">Name is required</span>
               )}
             </div>
@@ -106,7 +145,7 @@ function Signup() {
           </form>
 
           {/* Login Link */}
-          <p className="text-center text-sm text-gray-600 dark:text-gray-400">
+          <div className="text-center text-sm text-gray-600 dark:text-gray-400">
             Already have an account?{" "}
             <button
               type="button"
@@ -118,7 +157,7 @@ function Signup() {
             >
               Login here
             </button>
-          </p>
+          </div>
         </div>
       </dialog>
     </div>
