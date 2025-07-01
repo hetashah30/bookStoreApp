@@ -111,10 +111,10 @@ BookStore/
 
 ---
 
-## 🙋‍♀️ Author
+## 🙋🏻‍♀️ Author
 
-**👩‍💻 Heta Shah**
+**👩🏻‍💻 Heta Shah**
 📎 [Portfolio](https://hetashah30.github.io/MyPortfolio)
-🔗 [LinkedIn](https://www.linkedin.com/in/hetashah30)
+🔗 [LinkedIn](https://www.linkedin.com/in/heta-shah30/)
 
 ---
