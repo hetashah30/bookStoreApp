@@ -65,7 +65,7 @@ Built with the MERN stack, it offers both aesthetic appeal and performance.
 
 ## 🎬 Watch Demo
 
-[![Demo Video](https://youtu.be/ow_3xM8kAgk?si=jB04t1MPlp1CWx3q)]
+![Demo Video](https://youtu.be/ow_3xM8kAgk?si=jB04t1MPlp1CWx3q)
 
 ---
 
