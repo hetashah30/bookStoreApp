@@ -43,14 +43,20 @@ Built with the MERN stack, it offers both aesthetic appeal and performance.
 
 ## 📸 Screenshots
 
-### 🏠 Home Page
-![Home Page](./Frontend/public/homepage.png)
-
 ### 🔐 Login Modal
 ![Login Modal](./Frontend/public/login.png)
 
+### 🏠 Home Page
+![Home Page](./Frontend/public/home.png)
+
+### 📖 Free Books Section
+![Free Books Section](./Frontend/public/freeBooks.png)
+
+### 📖 Testimonials Section
+![Testimonials Section](./Frontend/public/reviews.png)
+
 ### 📚 Courses Page
-![Courses](./Frontend/public/courses.png)
+![Courses](./Frontend/public/books.png)
 
 ---
 
