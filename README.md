@@ -7,7 +7,7 @@ Built with the MERN stack, it offers both aesthetic appeal and performance.
 
 ## 🌐 Live Demo
 
-🚀 [View BookStore App](https://your-live-demo-link.com) <!-- Replace with actual link -->
+🚀 [Launching Soon]()
 
 ---
 
