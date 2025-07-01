@@ -88,6 +88,7 @@ npm run dev
 
 ## 📂 Folder Structure
 
+```
 BookStore/
 ├── Frontend/
 │   ├── src/
@@ -97,6 +98,7 @@ BookStore/
 │   ├── models/
 │   └── controllers/
 └── README.md
+```
 
 ---
 
@@ -107,14 +109,3 @@ BookStore/
 🔗 [LinkedIn](https://www.linkedin.com/in/hetashah30)
 
 ---
-
-## 📃 License
-
-This project is licensed under the [MIT License](LICENSE).
-
-```
-
----
-
-You can now paste this directly into your `README.md` file. Let me know if you want to include screenshots, badges, or Netlify/Vercel deployment guides too.
-```
