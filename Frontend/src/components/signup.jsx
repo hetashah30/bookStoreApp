@@ -21,7 +21,7 @@ function Signup() {
     };
     // Sending and Storing userInfo to the backend API for signup
     await axios
-      .post("http://localhost:4001/user/signup", userInfo)
+      .post("https://bookstore-backend-m0hl.onrender.com/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         // Handle successful signup response
