@@ -18,7 +18,8 @@ dotenv.config(); // Load environment variables from .env file
 
 // const port = 3000; // Use the port from the environment variable since it is sensitive information or default to 4000
 const PORT = process.env.PORT || 4000;
-const MongoURI = process.env.MongoDB_URI;
+// const MongoURI = process.env.MongoDB_URI;
+const MongoURI = process.env.MONGO_URI;
 
 // app.get("/", (req, res) => {
 //   res.send("BookStore App!");
@@ -31,10 +32,10 @@ try {
   //   useUnifiedTopology: true,
   // });
   mongoose.connect(MongoURI);
-  console.log("Connected to MongoDB");
+  console.log("Connected to MongoDB Atlas!");
 } catch (error) {
   //These useNewUrlParser and useUnifiedTopology options are used to avoid deprecation warnings in Mongoose. -  Not required for MongoDB on Atlas (Cloud) only use them if you are using MongoDB Compass (Local).
-  console.error("Error connecting to MongoDB:", error);
+  console.error("Error connecting to MongoDB Atlas:", error);
 }
 
 //Defining routes
