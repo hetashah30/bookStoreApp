@@ -4,6 +4,9 @@ import axios from "axios"; // Importing axios for making HTTP requests
 import toast from "react-hot-toast"; // Importing react-hot-toast for notifications
 import { useAuth } from "../context/AuthProvider"; // Importing useAuth from AuthProvider for authentication context
 
+// Using environment variable for the base URL.
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 function Signup() {
   const {
     register,
@@ -21,7 +24,7 @@ function Signup() {
     };
     // Sending and Storing userInfo to the backend API for signup
     await axios
-      .post("https://bookstore-backend-m0hl.onrender.com/user/signup", userInfo)
+      .post(`${baseURL}/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         // Handle successful signup response
