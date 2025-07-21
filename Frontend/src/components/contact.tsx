@@ -19,7 +19,7 @@ function Contact() {
 
     // Send contactInfo to the server or perform any other action
     await axios
-      .post("http://localhost:4001/contactform/contact", contactInfo)
+      .post("https://bookstore-backend-m0hl.onrender.com/contactform/contact", contactInfo)
       .then((res) => {
         toast.success(res.data.message);
         const formElement = document.getElementById(
