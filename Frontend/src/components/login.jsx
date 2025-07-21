@@ -4,6 +4,9 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useAuth } from "../context/AuthProvider";
 
+// Using environment variable for the base URL
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 function Login() {
   const {
     register,
@@ -19,15 +22,11 @@ function Login() {
     };
 
     try {
-      const res = await axios.post(
-        "https://bookstore-backend-m0hl.onrender.com/user/login",
-        userInfo,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const res = await axios.post(`${baseURL}/user/login`, userInfo, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (res.data && res.data.user) {
         toast.success("Login Successful!");
