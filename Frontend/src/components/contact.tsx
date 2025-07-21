@@ -2,7 +2,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
+// Importing the base URL from environment variables
 
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 function Contact() {
   const {
     register,
@@ -19,7 +21,7 @@ function Contact() {
 
     // Send contactInfo to the server or perform any other action
     await axios
-      .post("https://bookstore-backend-m0hl.onrender.com/contactform/contact", contactInfo)
+      .post(`${baseURL}/contactform/contact`, contactInfo)
       .then((res) => {
         toast.success(res.data.message);
         const formElement = document.getElementById(
