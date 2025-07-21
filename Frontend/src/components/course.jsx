@@ -4,13 +4,15 @@ import Cards from "./cards"; // Importing the Cards component
 import { Link } from "react-router-dom"; // Importing Link for navigation
 import axios from "axios"; // Importing axios for API calls
 
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 function Course() {
   const [book, setBook] = useState([]); // State to hold book data from the API (if no books - initially empty array to avoid errors)
   useEffect(() => {
     //Fetching book data from the API
     const getBook = async () => {
       try {
-        const res = await axios.get("https://bookstore-backend-m0hl.onrender.com/book");
+        const res = await axios.get(`${baseURL}/book`);
         console.log(res.data);
         setBook(res.data);
       } catch (error) {
